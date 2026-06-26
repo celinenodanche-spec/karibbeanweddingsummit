@@ -1,0 +1,281 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+  @font-face {
+    font-family: 'The Seasons';
+    src: url('https://warm-sopapillas-2197b6.netlify.app/the%20seasons.otf') format('opentype');
+    font-weight: 300 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  .kws-upsell * { box-sizing: border-box; margin: 0; padding: 0; }
+  .kws-upsell {
+    font-family: 'Raleway', sans-serif;
+    background: #FBF4EC;
+    color: #1A0A0F;
+    line-height: 1.6;
+  }
+  .kws-top-bar {
+    background: #3D0A1E;
+    text-align: center;
+    padding: 0.9rem 1rem;
+  }
+  .kws-top-bar p {
+    color: #C9956A;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .kws-hero {
+    background: #3D0A1E;
+    text-align: center;
+    padding: 4rem 2rem 3.5rem;
+  }
+  .kws-tag {
+    display: inline-block;
+    background: #C9956A;
+    color: #3D0A1E;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    margin-bottom: 1.8rem;
+    font-family: 'Raleway', sans-serif;
+  }
+  .kws-hero h1 {
+    font-family: 'The Seasons', serif;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 300;
+    color: #F5E6D3;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .kws-hero h1 em { font-style: italic; color: #C9956A; }
+  .kws-hero p {
+    color: rgba(245,230,211,0.75);
+    font-size: 1rem;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.75;
+  }
+  .kws-confirm {
+    background: #C9956A;
+    padding: 1.2rem 2rem;
+    text-align: center;
+  }
+  .kws-confirm p {
+    color: #3D0A1E;
+    font-size: 0.88rem;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+  }
+  .kws-confirm p span { font-weight: 400; opacity: 0.8; }
+  .kws-options {
+    padding: 4rem 2rem 5rem;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .kws-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .kws-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #C9956A;
+    display: block;
+    margin-bottom: 0.8rem;
+    font-family: 'Raleway', sans-serif;
+  }
+  .kws-intro h2 {
+    font-family: 'The Seasons', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 400;
+    color: #3D0A1E;
+    line-height: 1.25;
+    margin-bottom: 0.8rem;
+  }
+  .kws-intro h2 em { font-style: italic; color: #C9956A; }
+  .kws-intro p { color: #5A3A42 !important; font-size: 0.95rem; max-width: 500px; margin: 0 auto; }
+  .kws-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .kws-card {
+    background: #FFFFFF;
+    border: 1.5px solid rgba(61,10,30,0.1);
+    border-radius: 6px;
+    padding: 2rem 1.8rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .kws-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+  .kws-card h3 {
+    font-family: 'The Seasons', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3D0A1E;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+  }
+  .kws-desc {
+    font-size: 0.88rem;
+    color: #5A3A42 !important;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    font-family: 'Raleway', sans-serif;
+  }
+  .kws-desc ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.8rem; }
+  .kws-desc li { display: flex; align-items: flex-start; gap: 0.6rem; }
+  .kws-desc li::before { content: '✦'; color: #C9956A; font-size: 0.6rem; flex-shrink: 0; margin-top: 0.3rem; }
+  .kws-price-block { margin-bottom: 1.4rem; }
+  .kws-price {
+    font-family: 'The Seasons', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #3D0A1E;
+    line-height: 1;
+  }
+  .kws-price span { font-size: 1.1rem; }
+  .kws-price-note { font-size: 0.78rem; color: #5A3A42; margin-top: 0.2rem; font-family: 'Raleway', sans-serif; }
+  .kws-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #C9956A;
+    color: #3D0A1E;
+    text-decoration: none;
+    padding: 0.95rem 1.5rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-family: 'Raleway', sans-serif;
+  }
+  .kws-skip {
+    text-align: center;
+    padding: 0 2rem 4rem;
+  }
+  .kws-skip p {
+    color: #5A3A42;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    font-family: 'Raleway', sans-serif;
+  }
+  .kws-skip a {
+    color: #5A3A42;
+    font-size: 0.82rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    opacity: 0.6;
+    font-family: 'Raleway', sans-serif;
+  }
+  @media (max-width: 860px) {
+    .kws-grid { grid-template-columns: 1fr !important; gap: 1.2rem; }
+    .kws-hero { padding: 3rem 1.5rem 2.5rem; }
+    .kws-options { padding: 3rem 1.5rem 4rem; }
+    .kws-hero h1 { font-size: 1.9rem; }
+    .kws-intro h2 { font-size: 1.6rem; }
+    .kws-intro p { font-size: 0.9rem; }
+    .kws-desc { font-size: 0.85rem; }
+    .kws-top-bar p { font-size: 0.72rem; letter-spacing: 0.1em; }
+  }
+</style>
+
+<div class="kws-upsell">
+
+  <!-- BANDEAU HAUT -->
+  <div class="kws-top-bar">
+    <p>⏳ Offre réservée aux Expert.e.s venant de s'inscrire — disponible uniquement maintenant</p>
+  </div>
+
+  <!-- HERO -->
+  <div class="kws-hero">
+    <div class="kws-tag">Attendez une minute...</div>
+    <h1>Votre place est réservée.<br><em>Maximisez maintenant votre impact.</em></h1>
+    <p>Ces options sont proposées en tarif préférentiel exclusivement lors de votre inscription. Elles ne seront plus disponibles à ce prix après.</p>
+  </div>
+
+  <!-- CONFIRMATION -->
+  <div class="kws-confirm">
+    <p>✅ Inscription confirmée — <span>Complétez votre réservation ci-dessous</span></p>
+  </div>
+
+  <!-- OPTIONS -->
+  <div class="kws-options">
+    <div class="kws-intro">
+      <span class="kws-label">Options exclusives</span>
+      <h2>Choisissez ce qui <em>amplifie</em><br>votre présence.</h2>
+      <p>Chaque option est indépendante. Ajoutez celle(s) qui correspondent à vos objectifs.</p>
+    </div>
+
+    <div class="kws-grid">
+
+      <!-- Option 1 -->
+      <div class="kws-card">
+        <span class="kws-icon">📸</span>
+        <h3>Shooting photo &amp; vidéo professionnel</h3>
+        <div class="kws-desc">
+          Captez votre participation en images et en vidéo pour alimenter vos réseaux sociaux, votre site et vos supports de communication bien après l'événement.
+          <ul>
+            <li>Photos professionnelles de votre zone</li>
+            <li>Vidéo courte exploitable (Reels, stories)</li>
+            <li>Fichiers HD livrés après l'événement</li>
+          </ul>
+        </div>
+        <div class="kws-price-block">
+          <div class="kws-price"><span>€</span> 350 <span>TTC</span></div>
+        </div>
+      </div>
+
+      <!-- Option 2 -->
+      <div class="kws-card">
+        <span class="kws-icon">📢</span>
+        <h3>Mise en avant réseaux sociaux &amp; presse</h3>
+        <div class="kws-desc">
+          Profitez de la visibilité KWS pour être mis.e en avant avant, pendant et après l'événement sur nos canaux et auprès de nos partenaires presse.
+          <ul>
+            <li>Publications dédiées sur les réseaux KWS</li>
+            <li>Mention dans les communiqués de presse</li>
+            <li>Mise en avant sur K-Event.app</li>
+            <li>Contenu partagé à notre audience de 300 000+</li>
+          </ul>
+        </div>
+        <div class="kws-price-block">
+          <div class="kws-price"><span>€</span> 500 <span>TTC</span></div>
+        </div>
+      </div>
+
+      <!-- Option 3 -->
+      <div class="kws-card">
+        <span class="kws-icon">🧭</span>
+        <h3>Accompagnement stratégie 3 mois</h3>
+        <div class="kws-desc">
+          Un accompagnement personnalisé pour transformer votre participation au KWS® en accélérateur business durable — avant, pendant et après l'événement.
+          <ul>
+            <li>3 sessions de travail individuelles</li>
+            <li>Stratégie de présence et de conversion</li>
+            <li>Suivi post-événement et plan d'action</li>
+          </ul>
+        </div>
+        <div class="kws-price-block">
+          <div class="kws-price"><span>€</span> 800 <span>TTC</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
